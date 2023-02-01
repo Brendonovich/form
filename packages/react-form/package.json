@@ -1,0 +1,24 @@
+{
+  "name": "@brendonovich/react-form",
+  "version": "1.0.0",
+  "description": "",
+  "module": "build/esm/index.js",
+  "main": "build/cjs/index.js",
+  "browser": "build/umd/index.production.js",
+  "types": "build/types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "dependencies": {
+    "@brendonovich/form": "workspace:*",
+    "@tanstack/store": "beta",
+    "@tanstack/react-store": "beta"
+  }
+}

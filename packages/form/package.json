@@ -1,0 +1,20 @@
+{
+  "name": "@brendonovich/form",
+  "version": "1.0.0",
+  "description": "",
+  "module": "build/esm/index.js",
+  "main": "build/cjs/index.js",
+  "browser": "build/umd/index.production.js",
+  "types": "build/types/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tanstack/store": "beta",
+    "tiny-invariant": "^1.3.1",
+    "zod": "^3.20.2"
+  }
+}
