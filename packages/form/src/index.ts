@@ -202,6 +202,7 @@ export class Form<
     name: Key,
     options?: Partial<RegisterOptions<Data[Key]>>
   ) {
+    console.log("register");
     if (!this.fields.has(name)) this.fields.set(name, createField(name));
 
     return {

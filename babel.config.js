@@ -30,4 +30,14 @@ module.exports = {
     //   },
     // ],
   ].filter(Boolean),
+  overrides: [
+    {
+      exclude: ["./packages/solid-form/**"],
+      presets: ["@babel/react"],
+    },
+    {
+      include: ["./packages/solid-form/**"],
+      presets: ["babel-preset-solid"],
+    },
+  ],
 };

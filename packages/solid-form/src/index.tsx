@@ -5,6 +5,7 @@ import {
   RegisterOptions,
 } from "@brendonovich/form";
 import * as Solid from "solid-js";
+import { createMemo } from "solid-js";
 // remove once `@tanstack/solid-store` is available
 import { useStore } from "./solidStore";
 
@@ -32,6 +33,20 @@ export function createForm<
   type F = typeof form;
 
   return {
+    Register: <Key extends keyof Input & string>(
+      props: RegisterOptions<Data[Key]> & { name: Key } & {
+        children: (props: Solid.ComponentProps<"input">) => JSX.Element;
+      }
+    ) => (
+      <>
+        {props.children(
+          // NOTE: This call is what enables reactivity via getters
+          form.register(props.name, {
+            ...props,
+          })
+        )}
+      </>
+    ),
     register: <Key extends keyof Input & string>(
       key: Key,
       options?: RegisterOptions<Data[Key]>

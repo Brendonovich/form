@@ -8,7 +8,6 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "strictNullChecks": true,
-    "jsx": "react",
     "declaration": true,
     "emitDeclarationOnly": true,
     "noImplicitReturns": true,
